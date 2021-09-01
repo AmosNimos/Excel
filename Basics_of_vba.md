@@ -84,6 +84,33 @@ Sub Macro_Name()
 End Sub
 ~~~
 
+~~~
+Sub Macro_Name()
+    Dim index_x As Integer
+    Dim index_y As Integer
+    Dim Max As Integer
+    Dim Min As Integer
+    
+    Dim random_r As Integer
+    Dim random_g As Integer
+    Dim random_b As Integer
+    
+    Randomize ' Initialize random-number generator.
+    Max = 38
+    Min = 1
+    For index_y = Min To Max
+        For index_x = 1 To Max
+            random_r = Int((index_y * 5 + index_x * 5))
+            random_g = Int((index_y * 10))
+            random_b = Int((index_x * 10))
+            Cells(index_y, index_x).Interior.Color = RGB(random_r, random_g, random_b)
+            Cells(index_y, index_x).Value = "I ROCK"
+            Cells(index_y, index_x).Borders.LineStyle = xlContinuous
+        Next index_x
+    Next index_y
+End Sub
+~~~
+
 Source: [select-and-selection](https://wellsr.com/vba/excel/select-and-selection/) 
 
 You can find more documentation on documentation vba in excel on [wellsr](https://wellsr.com/vba/excel/).
