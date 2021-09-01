@@ -32,7 +32,7 @@ End Sub
 
 ## Change the value from the __Min__ and __Max__ of a column with a random value between __Min__ and __Max__ then average the result in the column bellow
 ~~~
-Sub test()
+Sub Macro_Name()
     Dim i As Integer
     Dim Max As Integer
     Dim Min As Integer
@@ -46,6 +46,41 @@ Sub test()
     Next i
     DATA = Range(Cells(Min, 1), Cells(Max, 1))
     Cells(Max, 1).Offset(1, 0).Value = Application.WorksheetFunction.Average(DATA)
+End Sub
+~~~
+
+## Showoff your skills
+~~~
+Sub Macro_Name()
+    Dim index_x As Integer
+    Dim index_y As Integer
+    Dim Max As Integer
+    Dim Min As Integer
+    
+    Dim random_r As Integer
+    Dim random_g As Integer
+    Dim random_b As Integer
+    
+    Randomize ' Initialize random-number generator.
+    Max = 38
+    Min = 1
+    For index_y = Min To Max
+        For index_x = 1 To Max
+            random_r = Int((255 * Rnd) + 0)
+            random_g = Int((255 * Rnd) + 0)
+            random_b = Int((255 * Rnd) + 0)
+            Cells(index_y, index_x).Interior.Color = RGB(random_r, random_g, random_b)
+            Cells(index_y, index_x).Value = "I ROCK"
+            
+            'random_r = Int((255 * Rnd) + 0)'
+            'random_g = Int((255 * Rnd) + 0)'
+            'random_b = Int((255 * Rnd) + 0)'
+            'Cells(index_y, index_x).Font.Color = RGB(random_r, random_g, random_b)'
+            'Cells(index_y, index_x).Font.Bold = True'
+            Cells(index_y, index_x).Borders.LineStyle = xlContinuous
+
+        Next index_x
+    Next index_y
 End Sub
 ~~~
 
