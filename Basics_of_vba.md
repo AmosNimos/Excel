@@ -19,7 +19,7 @@ Range("A1:B3").Value = "Test"
 
 ## The Offset Property adjusts your position based on the initial Range you define.
 ~~~
-Range("A1:B3").Offset(1, 2).Select
+Range("A1:B3").Offset(1, 2).Value = "Test"
 ~~~
 
 Source: [select-and-selection](https://wellsr.com/vba/excel/select-and-selection/)
