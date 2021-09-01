@@ -22,11 +22,28 @@ Range("A1:B3").Value = "Test"
 Range("A1:B3").Offset(1, 2).Value = "Test"
 ~~~
 
-# Change the value of cell __A4__ with the __Average__ from cell __A1__ to _B3_
+## Change the value of cell __A4__ with the __Average__ from cell __A1__ to _B3_
 ~~~
 Sub Macro_Name()
     Data = Range("A1:B3").Value
     Range("A4").Value = Application.WorksheetFunction.Average(Data)
+End Sub
+~~~
+
+## Change the value from the __Min__ and __Max__ of a column with a random value between __Min__ and __Max__ 
+~~~
+Sub Macro_Name()
+    Dim i As Integer
+    Dim Max As Integer
+    Dim Min As Integer
+    Dim random As Integer
+    Randomize ' Initialize random-number generator.
+    Max = 10
+    Min = 1
+    For i = 1 To Max
+        random = Int((Max * Rnd) + Min)
+        Cells(i, 1).Value = random
+    Next i
 End Sub
 ~~~
 
