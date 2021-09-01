@@ -22,7 +22,9 @@ Range("A1:B3").Value = "Test"
 Range("A1:B3").Offset(1, 2).Value = "Test"
 ~~~
 
-Source: [select-and-selection](https://wellsr.com/vba/excel/select-and-selection/)
+Source: [select-and-selection](https://wellsr.com/vba/excel/select-and-selection/) 
+More documentation on documentation vba in excel on [wellsr](https://wellsr.com/vba/excel/)
+
 
 # Optional
 ## How to activate the _dev_ pannel.
