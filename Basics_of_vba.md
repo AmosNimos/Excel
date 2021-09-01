@@ -2,7 +2,7 @@
 
 > To integrate vba code to excel you need to save them as Macro, these macro can then later be linked to any type of action, such as __button__ and keyboard shorcut.
 
-## Change the value of the active (main_selected) cell with __Test__.
+## Change the value of the active cell with __Test__.
 ~~~
 ActiveCell.Value = "Test"
 ~~~
@@ -12,7 +12,7 @@ ActiveCell.Value = "Test"
 Selection.Interior.Color = RGB(255, 0, 0)
 ~~~
 
-## Change the value of the cell from __A1__ to _B3_ with _Test_
+## Change the value from cell __A1__ to _B3_ with _Test_
 ~~~
 Range("A1:B3").Value = "Test"
 ~~~
@@ -20,6 +20,14 @@ Range("A1:B3").Value = "Test"
 ## The Offset Property adjusts your position based on the initial Range you define.
 ~~~
 Range("A1:B3").Offset(1, 2).Value = "Test"
+~~~
+
+# Change the value of cell __A4__ with the __Average__ from cell __A1__ to _B3_
+~~~
+Sub Macro_Name()
+    Data = Range("A1:B3").Value
+    Range("A4").Value = Application.WorksheetFunction.Average(Data)
+End Sub
 ~~~
 
 Source: [select-and-selection](https://wellsr.com/vba/excel/select-and-selection/) 
