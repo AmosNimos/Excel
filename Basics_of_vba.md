@@ -30,7 +30,8 @@ Sub Macro_Name()
 End Sub
 ~~~
 
-## Change the value from the __Min__ and __Max__ of a column with a random value between __Min__ and __Max__ then average the result in the column bellow __Max__
+## Change the value from the __Min__ and __Max__ of a column with a random value between __Min__ and __Max__ then average the result in the column bellow
+~~~
 Sub test()
     Dim i As Integer
     Dim Max As Integer
@@ -46,6 +47,7 @@ Sub test()
     DATA = Range(Cells(Min, 1), Cells(Max, 1))
     Cells(Max, 1).Offset(1, 0).Value = Application.WorksheetFunction.Average(DATA)
 End Sub
+~~~
 
 Source: [select-and-selection](https://wellsr.com/vba/excel/select-and-selection/) 
 
