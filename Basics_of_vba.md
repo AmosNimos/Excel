@@ -17,6 +17,13 @@ Selection.Interior.Color = RGB(255, 0, 0)
 Range("A1:B3").Value = "Test"
 ~~~
 
+## The Offset Property adjusts your position based on the initial Range you define.
+~~~
+Range("A1:B3").Offset(1, 2).Select
+~~~
+
+Source: [select-and-selection](https://wellsr.com/vba/excel/select-and-selection/)
+
 # Optional
 ## How to activate the _dev_ pannel.
 Check the dev option in the list located in:
