@@ -1,6 +1,7 @@
 # Create Macro
 
 > To integrate vba code to excel you need to save them as Macro, these macro can then later be linked to any type of action, such as __button__ and keyboard shorcut.
+> This is all on the French version some variable name may varry.
 
 ## Change the value of the active cell with __Test__.
 ~~~
@@ -112,6 +113,8 @@ End Sub
 ~~~
 
 Source: [select-and-selection](https://wellsr.com/vba/excel/select-and-selection/) 
+
+For regular Excel function: [Condition en francais](https://support.microsoft.com/fr-fr/office/utilisation-de-si-avec-les-fonctions-et-ou-et-non-d895f58c-b36c-419e-b1f2-5c193a236d97)
 
 You can find more documentation on documentation vba in excel on [wellsr](https://wellsr.com/vba/excel/).
 
